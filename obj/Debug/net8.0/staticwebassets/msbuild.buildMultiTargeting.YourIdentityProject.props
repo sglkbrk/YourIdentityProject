@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/YourIdentityProject.props" />
+</Project>
