@@ -64,6 +64,11 @@ public class UserAuthController : ControllerBase
     }
     public static string HashPasswordMD5(string password)
     {
+
+        if (password == null)
+        {
+            throw new ArgumentNullException("Password cannot be null");
+        }
         using (var md5 = MD5.Create())
         {
             var inputBytes = Encoding.UTF8.GetBytes(password);
